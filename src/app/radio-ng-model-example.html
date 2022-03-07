@@ -12,8 +12,7 @@
     {{item.description}}
   </mat-radio-button>
 </mat-radio-group>
-<div>Select month ID: {{ selectMonth? selectMonth : 'Choose a month' }}</div>
-<div>
-  Select month description: {{ selectMonth? listMonths[selectMonth].description
-  : 'Choose a month' }}
+<div *ngIf="selectMonth>=0">
+  <p>Select month ID: {{ selectMonth }}</p>
+  <p>Select month description: {{ getMonthName(selectMonth) }}</p>
 </div>

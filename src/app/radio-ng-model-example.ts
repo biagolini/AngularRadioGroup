@@ -28,6 +28,10 @@ export class RadioNgModelExample {
     { id: 10, description: 'November' },
     { id: 11, description: 'December' },
   ];
+
+  getMonthName(selectedNumber: number) {
+    return this.listMonths.find((x) => x.id == selectedNumber)?.description;
+  }
 }
 
 export interface Month {
