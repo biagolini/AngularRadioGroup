@@ -1,0 +1,19 @@
+<label id="example-radio-group-label">Pick your monthn</label>
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [(ngModel)]="selectMonth"
+>
+  <mat-radio-button
+    class="example-radio-button"
+    *ngFor="let item of listMonths"
+    [value]="item.id"
+  >
+    {{item.description}}
+  </mat-radio-button>
+</mat-radio-group>
+<div>Select month ID: {{ selectMonth? selectMonth : 'Choose a month' }}</div>
+<div>
+  Select month description: {{ selectMonth? listMonths[selectMonth].description
+  : 'Choose a month' }}
+</div>
